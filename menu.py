@@ -23,7 +23,7 @@ while True:
             if sub == '1':
                 CRUDusuario.create_usuario()
             elif sub == '2':
-                nome = input("Listar usuários, deseja algum nome especifico? ")
+                nome = input("Listar usuários, deseja algum cpf especifico (ENTER - todos)? ")
                 CRUDusuario.read_usuario(nome)
             
 
@@ -38,7 +38,7 @@ while True:
             if sub == '1':
                 CRUDvendedor.create_vendedor()
             elif sub == '2':
-                cpf = input("Listar vendedores, deseja algum cpf especifico? ")
+                cpf = input("Listar vendedores, deseja algum cpf especifico (ENTER - todos)? ")
                 CRUDvendedor.read_vendedor(cpf)
             
         
@@ -66,11 +66,11 @@ while True:
 
         if sub == '1':
             cpf_usuario = input("Digite seu CPF: ")
-            carrinho_usuario = compras.realizar_compra(cpf_usuario, driver)
+            carrinho_usuario = CRUDcompras.realizar_compra(cpf_usuario, driver)
               
         elif sub == '2':
             cpf_usuario = input("Digite seu CPF: ")
-            compras.ver_compras_realizadas(cpf_usuario)
+            CRUDcompras.ver_compras_realizadas(cpf_usuario)
                 
         else:
             print("Opção inválida. Por favor, digite uma opção válida.") 

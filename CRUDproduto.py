@@ -1,5 +1,5 @@
 from connect_database import driver
-from usuario import input_with_cancel
+from CRUDusuario import input_with_cancel
 
 def create_produto():
     print("\nInserindo um novo produto")
